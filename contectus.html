@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Aboutus page</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+  crossorigin="anonymous"></script>
+ 
+  </head>
+
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:ital,wght@0,500;0,700;1,500&display=swap');
+ body{
+background: rgb(34,34,33);
+background: linear-gradient(90deg, rgb(114, 166, 243) 0%, rgb(57, 181, 238) 42%, rgb(24, 128, 214) 100%);
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+}
+ /* form */
+ * {
+  box-sizing: border-box;
+}
+
+#h1image{
+  border: none;
+  height: 50px;
+  width: 70px;
+  color: whitesmoke;
+  
+
+}
+   
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f4f4f4b0;
+  box-shadow: inset 0 0 12px;
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 100px;
+}
+
+#button {
+  font-family:Poppins, sans-serif ;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: #0053ac ;
+  transform: scaleX(98%);
+  box-shadow: 0 12px 9px rgba(0, 0, 0, 0.295);
+  transition: 0.2s;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+.hidden {
+  display: none;
+}
+
+#confirmation {
+  margin-top: 20px;
+  text-align: center;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+*{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+     }
+     body{
+      
+       background-size: cover;
+       height: 100vh;
+       background-position: center;
+     }
+     header{
+       width: 100%;
+       height: 100px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       position: fixed;
+       z-index: 99;
+       box-shadow: 0 0 10px #000;
+       background: rgb(2,0,36);
+background: linear-gradient(90deg, rgb(60, 57, 119) 0%, rgba(9,9,121,1) 46%, rgba(0,212,255,1) 100%);
+     }
+     #chk1{
+       display: none;
+     }
+     i{
+       color: #fff;
+       cursor: pointer;
+     }
+     header .logo{
+       flex: 1;
+       color: #fdfdfd;
+       margin-left: 50px;
+       text-transform: uppercase;
+       font-size: 15px;
+       
+     }
+     header .search-box{
+       flex: 1;
+       position: relative;
+     }
+     .search-box input{
+       width: 100%;
+       height: 40px;
+       border: none;
+       outline: none;
+       background: #f2f2f2;
+       border-radius: 30px;
+      
+       font-size: 16px;
+       text-align: center;
+       padding-left: 5px;
+       padding-right: 40px;
+     }
+     .search-box button{
+       cursor: pointer;
+       width: 40px;
+       height: 40px;
+       border-radius: 30px;
+       border: none;
+       position: absolute;
+       top: 0;
+       right: 0;
+       transform: scale(0.9);
+       background: green;
+     }
+     header ul{
+       flex: 2;
+       display: flex;
+       justify-content: space-evenly;
+     }
+     header ul li{
+       list-style: none;
+     }
+     header ul li a{
+       text-decoration: none;
+       color: #fff;
+       font-weight: 600;
+       text-transform: uppercase;
+       padding: 10px 15px;
+     }
+     header ul li a:hover{
+       border-bottom: 2px solid cadetblue;
+     }
+     header .menu{
+        font-size: 2.5em;
+        display: none;
+     }
+     @media(max-width:1000px){
+        .search-box button{
+            position: absolute;
+        }
+        header ul{
+            position: fixed;
+            top: 100px;
+            right: -100%;
+            background-color: rgba(129, 129, 255, 0.404);
+            backdrop-filter: blur(12px) ;
+            height: calc(100vh - 100px);
+            width: 12px;
+            flex-direction: column;
+            align-items: center;
+            transition: right 0.5s linear;
+       box-shadow: 0 0 12px;
+            
+        }
+        header .menu{
+            display: block;
+            width: 100px;
+            text-align: center;
+        }
+        #chk1:checked ~ ul{
+            right: 0;
+        }
+     }
+     @media(max-width:600px){
+        header .logo{
+            font-size: 10px;
+            margin-left: 8px;
+        }
+        header ul{
+            width: 100%;
+        }
+     }
+image:hover {
+  overflow: hidden;
+  transform: scale(120%);
+}
+
+/* .container{
+      padding: 160px 12px;
+   }
+#yes{
+margin: auto;
+} */
+
+/* cards */
+.card {
+  background-color: rgb(255, 254, 251);
+  border: 2px solid rgba(255, 255, 255, 0.493);
+  border-radius: 20px 0 20px 0;
+}
+
+.buton {
+  justify-content: center;
+  text-align: center;
+}
+
+.buton a {
+  width: 25%;
+  font-size: 18px;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.buton a:hover {
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(3, 3, 3);
+  color: black;
+}
+
+img {
+  border: 1px solid rgba(255, 255, 255, 0.731);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+img:hover {
+  box-shadow: inset 0 0 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  transform: scale(95%);
+  transition: 0.3s;
+}
+
+h5 {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+/* .card:hover{
+      border: 2px solid black;
+      box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.776);
+  } */
+p {
+  color: rgb(49, 49, 49);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  margin-top: 15px;
+}
+
+.btn {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  justify-content: center;
+}
+
+h5 {
+  color: black;
+  font-weight: bold
+}
+
+@media (min-width:576px) and (max-width:1151px) {
+  h5 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .buton a {
+    width: 40%;
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+}
+
+@media (min-width:451px) and (max-width:575px) {
+  h5 {
+    font-size: 22px;
+    line-height: 25px;
+  }
+
+  .buton a {
+    width: 40%;
+    font-size: 19px;
+  }
+
+  p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width:200px) and (max-width:450px) {
+  h5 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .buton a {
+    width: 40%;
+    font-size: 18px;
+  }
+
+  p {
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+}
+
+/* navbar */
+
+/* dropdowm */
+.dropdown {
+      display: inline-block;
+      position: relative;
+    }
+
+    .dropdown-button {
+      background-color: transparent;
+      color: white;
+      padding: 0px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Style the dropdown content (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: transparent;
+      backdrop-filter: blur(30px);
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Style the links inside the dropdown */
+    .dropdown-content a {
+      color: rgb(255, 255, 255);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: 0.2s ease-in;
+    }
+
+    /* Change color on hover */
+    .dropdown-content a:hover {
+      background-color: transparent;
+      transform: scale(1.1);
+      transition: 0.2s ease-in;
+      background-color: rgb(38, 0, 255);
+      border-radius: 10px;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* dropdown */
+    .a :hover {
+      background-color: transparent;
+    }
+
+/* footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #bbb;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.social-media i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (min-width: 768px) {
+  .footer-section {
+      width: 30%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-section {
+      width: 100%;
+      text-align: center;
+  }
+
+  .footer-section:not(:last-child) {
+      margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .footer-section h3 {
+      font-size: 18px;
+  }
+
+  .social-media i {
+      font-size: 20px;
+  }
+}
+#h1image{
+  border: none;
+  height: 70px;
+  width: 70px;
+  
+}
+
+/* footer */
+/* footer */
+  </style>
+</head>
+
+<body>
+
+ <!-- Nivbar -->
+ <header>
+  <input type="checkbox" name="" id="chk1">
+  <div class="logo">
+    <h1><img src="LA IMPERIAL LOGO.png" id="h1image"><b>IMPERIAL </b></h1>
+  </div>
+  <div class="search-box">
+    <!-- <form action="">
+          <input type="text" name="search" id="srch" placeholder="Search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form> -->
+  </div>
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+
+    <li>
+      <div class="dropdown">
+        <button class="dropdown-button">CATEGORIES</button>
+        <div class="dropdown-content">
+          <a href="haier.html">Haier</a>
+          <a href="dawlance.html">Dawlance</a>
+          <a href="pel.html">Pel</a>
+         
+        </div>
+      </div>
+    </li>
+   
+   
+    <li><a href="Aboutus.html">About</a></li>
+    <li><a href="contectus.html">Contact </a></li>
+
+    <li>
+     
+  </ul>
+  <div class="menu">
+    <label for="chk1">
+      <i class="fa fa-bars"></i>
+    </label>
+  </div>
+</header>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <!-- contect -->
+
+  <H1 style="text-align: center; text-warning">How Can We Help</H1>
+  <div class="container mt-5" itemref="">
+    <h1 class="display-3  text-center " style="color:(90deg, rgb(60, 57, 119) 0%, rgba(9,9,121,1) 46%, rgba(0,212,255,1) 100%);">Contact Form</h1>
+    <div class="row">
+        <form action="" name="Form1" method="post">
+
+        <div class="mb-3">
+            <label for="fn" class="form-label" style="color: rgb(0, 0, 0);">Name</label>
+            <input type="text" class="form-control" id="fn" placeholder="">
+            <label for="" id="fnerror" class="form-label"></label>
+        </div>
+        <div class="mb-3">
+            <label for="em" class="form-label" style="color: rgb(0, 0, 0);">Email address</label>
+            <input type="email" class="form-control" id="em" placeholder="">
+            <label for="" id="emerror" class="form-label"></label>
+        </div>
+        <div class="mb-3">
+            <label for="text" class="form-label" style="color: rgb(0, 0, 0);">Message</label>
+            <textarea class="form-control" id="text" rows="3"></textarea>
+            <label for="" id="taerror" class="form-label"></label>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto mb-5">
+            <input  type="button" class="btn btn-warning  " name="" value="SUBMIT" onclick="validate()" id="button">
+        </div>
+    </form>
+    </div>
+</div>
+
+  <script>
+   function validate() {
+            var name = document.getElementById("fn").value;
+            var email = document.getElementById("em").value;
+            var textarea = document.getElementById("text").value;
+            // alert(name + email);
+            var namePattern = /^[A-Za-z ]{3,20}$/;
+            var emailPattern = /^[a-zA-Z_.]{3,}[0-9]{0,9}@[a-zA-z]{3,}[.]{1}[a-zA-Z]{2,6}$/;
+
+            if(namePattern.test(name)){
+                document.getElementById("fnerror").innerHTML="";
+            }else{
+                document.getElementById("fnerror").innerHTML = "Name is invalid!";
+                document.getElementById("fnerror").style.color = "red";
+            }
+
+            if(emailPattern.test(email)){
+                document.getElementById("emerror").innerHTML="";
+            }else{
+                document.getElementById("emerror").innerHTML = "Email is invalid!";
+                document.getElementById("emerror").style.color = "red";
+            }
+
+            if(textarea != 0 ){
+                document.getElementById("taerror").innerHTML="";
+            }else if(textarea == 0){
+                document.getElementById("taerror").innerHTML = "Write your message";
+                document.getElementById("taerror").style.color = "red";
+            }
+            if(namePattern.test(name) != 0 && emailPattern.test(email) && textarea != 0 ){
+                document.getElementById("fn").value = "";
+                document.getElementById("em").value = "";
+                document.getElementById("text").value = "";
+            }
+
+
+         
+        }
+   </script>
+  
+
+
+
+      
+      
+
+    </section>
+    <br>
+    <br>
+    <H6 style="font-size: 50PX; padding-left: 300px;"> <B>FIND HERE</B></H6>
+    <!--Section: Contact v.2-->
+  </div>
+
+
+
+  <section>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+        <h1>About Us</h1>
+        <p class="p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore magnam corporis explicabo repellendus. Quis
+          accusamus modi omnis enim voluptates officiis quaerat dicta iusto rem veritatis! Quod cupiditate libero
+          reprehenderit quis amet et ducimus quos tenetur voluptatibus, delectus autem culpa vitae a. Nisi velit labore
+          corporis ipsam recusandae et natus voluptas!</p>
+      </div>
+      <br>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+        <iframe id="yes" class="p-3"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14472.551416506198!2d67.01500895541992!3d24.927373300000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f90157042d3%3A0x93d609e8bec9a880!2sAptech%20Computer%20Education%20North%20Nazimabad%20Center!5e0!3m2!1sen!2s!4v1706683180984!5m2!1sen!2s"
+          width="600" height="450" style="border-radius:20px;  " allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <script >
+
+    function validateForm() {
+      var name = document.getElementById("name").value.trim();
+      var email = document.getElementById("email").value.trim();
+      var message = document.getElementById("message").value.trim();
+      var valid = true;
+    
+      // Validate name
+      if (name === "") {
+        document.getElementById("nameError").innerHTML = "Name is required";
+        valid = false;
+      } else {
+        document.getElementById("nameError").innerHTML = "";
+      }
+    
+      // Validate email
+      if (email === "") {
+        document.getElementById("emailError").innerHTML = "Email is required";
+        valid = false;
+      } else if (!validateEmail(email)) {
+        document.getElementById("emailError").innerHTML = "Invalid email format";
+        valid = false;
+      } else {
+        document.getElementById("emailError").innerHTML = "";
+      }
+    
+      // Validate message
+      if (message === "") {
+        document.getElementById("messageError").innerHTML = "Message is required";
+        valid = false;
+      } else {
+        document.getElementById("messageError").innerHTML = "";
+      }
+    
+      return valid;
+    }
+    
+    function validateEmail(email) {
+      // Regular expression for basic email validation
+      var re = /\S+@\S+\.\S+/;
+      return re.test(email);
+    }
+</script>
+
+
+<footer>
+  <div class="footer-container">
+      <div class="footer-section contact">
+          <h3>Contact Us</h3>
+          <p style="color: #fff;">Email: laimperial.com</p>
+          <p style="color: #fff;">Phone: 0310200100302</p>
+          <p style="color: #fff;">Address: North Nazimabad </p>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Aboutus.html">About Us</a></li>
+            <li><a href="contectus.html">Contact </a></li>
+         
+        </ul>
+    </div>
+
+      <div class="footer-section social-media">
+          <h3>Connect with Us</h3>
+          <ul>
+              <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i>Facebook</a></li>
+              <li><a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i>Twitter</a></li>
+              <li><a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fab fa-instagram"></i>Instagram</a></li>
+            
+          </ul>
+      </div>
+  </div>
+
+  <div class="copyright">
+      <p>&copy; 2024 la imoerial. All rights reserved.</p>
+  </div>
+</footer>
+  <!-- footer -->
+  
+
+
+
+</body>
+
+</html>
